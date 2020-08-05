@@ -34,7 +34,7 @@ def OracleSelectQuery(con, strQuery):
     csr = con.cursor()
     try: 
         csr.executemany(strQuery)
-        queryResult= csr.fecthall() #USED TO STORE IN A VARIABLE THE QUERY
+        queryResult= csr.fetchall() #USED TO STORE IN A VARIABLE THE QUERY
         return queryResult
             # [print(row) for row in cursorObj.fetchall()] #PRINT QUERY RESULTS
     except cx_Oracle.Error as Error:
